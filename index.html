@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <audio src=""></audio>
+    <div class="container">
+        <div id="player">
+            <div id="player-header">
+                <h1>Music Player</h1>
+                <div class="button side" id="open-play-list">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div id="song-image">
+                <div id="song-image-inner">
+                    <img src="#" alt="cover" id="image">
+                    <i class="fa-solid fa-music hide"></i>
+                </div>
+            </div>
+            <div id="song-name">
+                <p id="song-title">Song title</p>
+                <p id="song-album"><span>Album</span></p>
+                <p id="song-artist">Song singer</p>
+            </div>
+            <div id="song-tracking">
+                <p class="song-tracking-duration start">00:00</p>
+                <input type="range" id="duration" value="0">
+                <p class="song-tracking-duration end">00:00</p>
+            </div>
+            <div id="player-buttons">
+                <div id="volume-area" class="hide">
+                    <input type="range" id="volume-change" min="0" max="100" value="20">
+                </div>
+                <div class="button side volume">
+                    <i class="fa-solid fa-volume-xmark hide"></i>
+                    <i class="fa-solid fa-volume-low"></i>
+                    <i class="fa-solid fa-volume-high hide"></i>
+                </div>
+                <div class="button" id="backward">
+                    <i class="fa-solid fa-backward"></i>
+                </div>
+                <div class="button" id="play">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="button hide" id="pause">
+                    <i class="fa-solid fa-pause"></i>
+                </div>
+                <div class="button" id="forward">
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+                <div class="button side" id="shuffle">
+                    <i class="fa-solid fa-shuffle"></i>
+                </div>
+            </div>
+            <div id="playlist"></div>
+        </div>
+        <div class="play-list">
+            <div id="play-list-header">
+                <div class="button side" id="close-play-list">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <ol id="list"></ol>
+            <div class="playlist-buttons">
+                <input type="file" id="fileInput" class="hidden" accept="audio/*"/>
+                <label for="fileInput" class="custom-file-upload">Choose your track</label>
+                <button type="button" id="reset-btn">Reset Playlist</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/b48893ea03.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
